@@ -1,0 +1,31 @@
+#include <stdio.h>
+float metersToKilometers(float meters) {
+    return meters / 1000;
+}
+float gramsToKilograms(float grams) {
+    return grams / 1000;
+}
+int main() {
+    int choice;
+    float value, convertedValue;
+ printf("Unit Conversion Program\n");
+    printf("1. Meters to Kilometers\n");
+    printf("2. Grams to Kilograms\n");
+    printf("Enter your choice (1 or 2): ");
+    scanf("%d", &choice);
+    if (choice == 1) {
+        printf("Enter value in meters: ");
+        scanf("%f", &value);
+        convertedValue = metersToKilometers(value);
+        printf("%.2f meters = %.2f kilometers\n", value, convertedValue);
+    } else if (choice == 2) {
+        printf("Enter value in grams: ");
+        scanf("%f", &value);
+        convertedValue = gramsToKilograms(value);
+        printf("%.2f grams = %.2f kilograms\n", value, convertedValue);
+    } else {
+        printf("Invalid choice! Please enter 1 or 2.\n");
+    }
+
+    return 0;
+}
